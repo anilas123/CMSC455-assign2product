@@ -22,7 +22,7 @@ products = {
 
 @app.route('/products', methods=['GET'])
 def get_products():
-    return jsonify(products)
+    return jsonify(products.copy())
 
 @app.route('/products/<int:product_id>', methods=['GET'])
 def get_product(product_id):
