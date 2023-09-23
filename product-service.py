@@ -26,7 +26,8 @@ def get_products():
 
 @app.route('/products/<int:product_id>', methods=['GET'])
 def get_product(product_id):
-    product = products.get(str(product_id))
+    product = products.get(product_id)
+    print(product)
     if product:
         return jsonify(product)
     else:
